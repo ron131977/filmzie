@@ -1,5 +1,47 @@
 [
     {        
+        "title": "Watch Kulong (2024) Movie",
+        "name": " Movie Kulong (2024)",
+        "image": "https://res.cloudinary.com/db36kfuq3/image/upload/c_scale,h_750,w_500/v1731675938/Kulong_2024_otnkhe.webp",
+       "videomovieitem": [
+            "t4CZNSkpW"
+        ],
+        "videomovies": [
+            "tt32164798"
+        ],
+        "dailymovies":
+        "", 
+        "image1": "https://res.cloudinary.com/db36kfuq3/image/upload/c_scale,h_720,w_1280/v1731675938/Kulong_2024_1_fenmxw.webp"
+    },
+    {        
+        "title": "Watch Kasalo (2024) Movie",
+        "name": " Movie Kasalo (2024)",
+        "image": "https://res.cloudinary.com/db36kfuq3/image/upload/c_scale,h_750,w_500/v1731675938/Kasalo_2024_rh95s8.webp",
+       "videomovieitem": [
+            "QGYVdt4ft"
+        ],
+        "videomovies": [
+            "tt31722125"
+        ],
+        "dailymovies":
+        "x98tg34", 
+        "image1": "https://res.cloudinary.com/db36kfuq3/image/upload/c_scale,h_720,w_1280/v1731675938/Kasalo_2024_1_rpddgq.webp"
+    },
+    {        
+        "title": "Watch Dirty Ice Cream (2024) Movie",
+        "name": " Movie Dirty Ice Cream (2024)",
+        "image": "https://res.cloudinary.com/db36kfuq3/image/upload/c_scale,h_750,w_500/v1731675939/Dirty_Ice_Cream_2024_uewp3z.webp",
+       "videomovieitem": [
+            "GX5DrKfar"
+        ],
+        "videomovies": [
+            "tt32164743"
+        ],
+        "dailymovies":
+        "x98xo7c", 
+        "image1": "https://res.cloudinary.com/db36kfuq3/image/upload/c_scale,h_720,w_1280/v1731675938/Dirty_Ice_Cream_2024_1_saqydw.webp"
+    },
+    {        
         "title": "Watch Dayo (2024) Movie",
         "name": " Movie Dayo (2024)",
         "image": "https://res.cloudinary.com/db36kfuq3/image/upload/c_scale,h_750,w_500/v1731676560/Dayo_2024_vrwphc.webp",
