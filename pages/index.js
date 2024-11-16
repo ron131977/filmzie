@@ -237,7 +237,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Movies & Tv Shows™ - Online. Stream. Download.</title>
+        <title>Movies & Tv Shows™ - Explore. Discover. Online.</title>
 
         <link
           rel="sitemap"
@@ -278,23 +278,23 @@ export default function Home() {
         />
         <meta
           property="og:description"
-          content="Watch free movies and TV shows online—explore top titles, discover new releases, and start streaming now!"
+          content="Stream HD movies and TV Shows for free Explore. Discover. Online. explore top titles, discover new releases, and start streaming now!"
         />
         <meta
           name="description"
-          content="Watch free movies and TV shows online—explore top titles, discover new releases, and start streaming now!"
+          content="Stream HD movies and TV Shows for free Explore. Discover. Online. explore top titles, discover new releases, and start streaming now!"
         />
         <link rel="canonical" href="https://moviesandtvshows.vercel.app/" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Movies & Tv Shows™ - Online. Stream. Download. "
+          content="Movies & Tv Shows™ - Explore. Discover. Online. "
         />
         <meta property="og:url" content="https://moviesandtvshows.vercel.app" />
         <meta
           property="og:site_name"
-          content="Movies & Tv Shows™ - Online. Stream. Download. "
+          content="Movies & Tv Shows™ - Explore. Discover. Online. "
         />
         <meta
           property="og:image"
@@ -305,7 +305,7 @@ export default function Home() {
         <meta property="og:image:type" content="image/jpg" />
         <meta
           name="application-name"
-          content="Movies & Tv Shows™ - Online. Stream. Download. "
+          content="Movies & Tv Shows™ - Explore. Discover. Online. "
         />
         <meta
           property="article:modified_time"
@@ -320,11 +320,11 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Movies & Tv Shows™ - Online. Stream. Download."
+          content="Movies & Tv Shows™ - Explore. Discover. Online."
         />
         <meta
           name="twitter:description"
-          content="Watch free movies and TV shows online—explore top titles, discover new releases, and start streaming now!"
+          content="Stream HD movies and TV Shows for free Explore. Discover. Online. explore top titles, discover new releases, and start streaming now!"
         />
         <meta
           name="twitter:image"

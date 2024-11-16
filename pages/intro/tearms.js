@@ -220,7 +220,7 @@ const Tearms = () => {
         />
         <meta
           property="description"
-          content="Watch free movies and TV shows online—explore top titles, discover new releases, and start streaming now!"
+          content="Stream HD movies and TV Shows for free Explore. Discover. Online. explore top titles, discover new releases, and start streaming now!"
         />
 
         <link
@@ -232,7 +232,7 @@ const Tearms = () => {
         <meta property="og:title" content="Movies & Tv Shows™ " />
         <meta
           property="og:description"
-          content="Watch free movies and TV shows online—explore top titles, discover new releases, and start streaming now!"
+          content="Stream HD movies and TV Shows for free Explore. Discover. Online. explore top titles, discover new releases, and start streaming now!"
         />
         <meta
           property="og:url"
