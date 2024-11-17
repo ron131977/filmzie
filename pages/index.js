@@ -1066,7 +1066,7 @@ export default function Home() {
           border-radius: 0;
           padding: 0;
           overflow-y: auto;
-          z-index: 10000; /* This is in front of the overlay */
+           z-index: 10000; /* This is in front of the overlay */
         }
 
         .popup-content iframe {
@@ -1084,7 +1084,7 @@ export default function Home() {
           border: none;
           color: white;
           cursor: pointer;
-          z-index: 10001; /* Ensures it's above everything */
+           z-index: 10001; /* Ensures it's above everything */
         }
 
         /* For Full-Screen */
