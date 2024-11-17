@@ -352,6 +352,14 @@ export default function Home() {
         />
       </Head>
       <SocialSharing />
+      <a href='https://ko-fi.com/D1D111THPU'  target="_blank" rel="noopener noreferrer"><img src='https://storage.ko-fi.com/cdn/kofi5.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com'  style={{
+      display: "block",
+      height: "50px",
+      textAlign: "center", // This is not necessary here for the <img>, as it's block level
+      margin: "0 auto",
+      marginTop: "20px",  // Keeps the top margin
+      marginBottom: "20px",  // Added margin-bottom to give space below the button
+    }} /></a>
       {isAdult && <AdultSkipAds movie={movie} />}
       <Script src="../../../propler/ads.js" defer />
       <Script src="../../../propler/ads2.js" defer />
