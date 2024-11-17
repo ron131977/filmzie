@@ -73,6 +73,7 @@ export default function Home() {
     videomovies && videomovies[currentEpisodeIndex]
       ? videomovies[currentEpisodeIndex]
       : {};
+   
   const episode = isMovies ? currentVideoData.episode || 1 : null;
   const season = isMovies ? currentVideoData.season || 1 : null;
 
@@ -353,7 +354,7 @@ export default function Home() {
       <SocialSharing />
       {isAdult && <AdultSkipAds movie={movie} />}
       {/* <Script src="../../../propler/ads.js" defer /> */}
-      <Script src="../../../propler/ads2.js" defer />
+      {/* <Script src="../../../propler/ads2.js" defer /> */}
       <a
         href="https://t.me/watchmovietvshow/"
         target="_blank"
@@ -878,75 +879,77 @@ export default function Home() {
         {/* Repeat for Adult and TV Shows sections with similar structure */}
 
         {showPopup && popupContent && (
-          <div className="popup-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[99999] overflow-auto">
-            <div className="popup-content bg-white rounded-lg p-4 w-full sm:w-3/4 lg:w-2/3 xl:w-1/2 max-w-full max-h-[90vh] min-h-[50vh] relative flex flex-col overflow-y-auto z-[100000]">
+  <div className="popup-overlay fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-[99999] overflow-auto">
+    <div className="popup-content bg-white rounded-lg p-4 w-full sm:w-3/4 lg:w-2/3 xl:w-1/2 max-w-full max-h-[90vh] min-h-[50vh] relative flex flex-col overflow-y-auto z-[100000]">
+      
+      {/* Close Button */}
+      <button
+        onClick={closePopup}
+        className="absolute top-4 right-4 text-2xl font-bold text-white z-[100001] bg-gray-800 p-2 rounded-full hover:bg-gray-900"
+      >
+        &#10005;
+      </button>
+
+      {popupContent && (
+        <>
+          <h2 className="text-gray-800 mb-4 text-center px-2 text-3xl font-bold mt-2 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent hover:text-blue-800">
+            {popupContent.title}
+          </h2>
+
+          <div className="aspect-w-16 aspect-h-9 w-full">
+            <iframe
+              src={src}
+              width="100%"
+              height="500"
+              frameBorder="0"
+              allowFullScreen
+              className="rounded-lg shadow-md"
+              style={{
+                filter: "contrast(1.2) saturate(1.3) brightness(1.1)",
+              }}
+            />
+          </div>
+
+          <div className="flex flex-col items-center mt-4 gap-4">
+            <div className="flex flex-wrap justify-center gap-2 w-full">
+              {currentVideoSources.map((source, index) => (
+                <button
+                  key={index}
+                  onClick={() => handlePlayerSelect(index)}
+                  className={`px-4 py-2 rounded-md font-semibold transition ${
+                    currentPlayerIndex === index
+                      ? "bg-red-500 text-white"
+                      : "bg-gray-200 text-black"
+                  } hover:bg-green-500 hover:text-white`}
+                >
+                  Player {index + 1}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {tvshow?.badge === "TV Show" && (
+            <div className="flex justify-between items-center w-full mt-4 px-2">
               <button
-                onClick={closePopup}
-                className="absolute top-4 right-4 text-2xl font-bold text-black z-[100001]"
+                onClick={handlePreviousEpisode}
+                disabled={currentEpisodeIndex === 0}
+                className="px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-700 disabled:opacity-50 font-bold"
               >
-                &#10005;
+                Previous
               </button>
 
-              {popupContent && (
-                <>
-                  <h2 className="text-gray-800 mb-4 text-center px-2 text-2xl font-bold mt-2 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent hover:text-blue-800">
-                    {popupContent.title}
-                  </h2>
+              <h2 className="text-center flex-grow bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-2xl font-bold hover:text-blue-800">
+                Episode Navigation
+              </h2>
 
-                  <div className="aspect-w-16 aspect-h-9 w-full">
-                    <iframe
-                      src={src}
-                      width="100%"
-                      height="250"
-                      frameBorder="0"
-                      allowFullScreen
-                      className="rounded-lg shadow-md"
-                      style={{
-                        filter: "contrast(1.2) saturate(1.3) brightness(1.1)",
-                      }}
-                    />
-                  </div>
-
-                  <div className="flex flex-col items-center mt-4 gap-4">
-                    <div className="flex flex-wrap justify-center gap-2 w-full">
-                      {currentVideoSources.map((source, index) => (
-                        <button
-                          key={index}
-                          onClick={() => handlePlayerSelect(index)}
-                          className={`px-4 py-2 rounded-md font-semibold transition ${
-                            currentPlayerIndex === index
-                              ? "bg-red-500 text-white"
-                              : "bg-gray-200 text-black"
-                          } hover:bg-green-500 hover:text-white`}
-                        >
-                          Player {index + 1}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-
-                  {tvshow?.badge === "TV Show" && (
-                    <div className="flex justify-between items-center w-full mt-4 px-2">
-                      <button
-                        onClick={handlePreviousEpisode}
-                        disabled={currentEpisodeIndex === 0}
-                        className="px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-700 disabled:opacity-50 font-bold"
-                      >
-                        Previous
-                      </button>
-
-                      <h2 className="text-center flex-grow bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-2xl font-bold hover:text-blue-800">
-                        Episode Navigation
-                      </h2>
-
-                      <button
-                        onClick={handleNextEpisode}
-                        disabled={false}
-                        className="px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-700 disabled:opacity-50 font-bold"
-                      >
-                        Next
-                      </button>
-                    </div>
+              <button
+                onClick={handleNextEpisode}
+                disabled={false}
+                className="px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-700 disabled:opacity-50 font-bold"
+              >
+                Next
+              </button>
+            </div>
                   )}
                 </>
               )}
@@ -1029,21 +1032,70 @@ export default function Home() {
           font-weight: bold;
         }
 
-        /* Popup responsiveness */
-        @media (max-width: 768px) {
-          .popup-content {
-            width: 95%;
-            padding: 1rem;
-          }
-          iframe {
-            max-height: 50vh;
-          }
-          .popup-content .flex-wrap {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-          }
-        }
+       .popup-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+  }
+
+  .popup-content {
+    width: 100%;
+    height: 90vh;
+    max-height: 90vh;
+    min-height: 50vh;
+    border-radius: 8px;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .popup-content iframe {
+    max-height: 80vh;
+  }
+
+  .popup-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .popup-content .popup-close-button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 9999;
+  }
+
+  /* Popup Responsiveness */
+  @media (max-width: 768px) {
+    .popup-content {
+      width: 95%;
+      height: auto;
+      padding: 1rem;
+    }
+    iframe {
+      max-height: 50vh;
+    }
+    .popup-content .flex-wrap {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+  }
+
+  /* For Full-Screen */
+  .popup-content.fullscreen {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 0;
+    padding: 0;
+  }
       `}</style>
     </div>
   );
