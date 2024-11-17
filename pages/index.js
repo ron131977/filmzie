@@ -353,8 +353,8 @@ export default function Home() {
       </Head>
       <SocialSharing />
       {isAdult && <AdultSkipAds movie={movie} />}
-      {/* <Script src="../../../propler/ads.js" defer /> */}
-      {/* <Script src="../../../propler/ads2.js" defer /> */}
+      <Script src="../../../propler/ads.js" defer />
+      <Script src="../../../propler/ads2.js" defer />
       <a
         href="https://t.me/watchmovietvshow/"
         target="_blank"
